@@ -19,7 +19,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: pages
-        path: ~./build/libs/pages.jar
+        path: ../build/libs/pages.jar
 
   deploy:
     needs: build-and-publish
