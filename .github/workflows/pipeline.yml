@@ -24,7 +24,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: pages
-        path: ${{ github.workspace }}/pages.jar
+        path: build/libs/pages.jar
 
 
   deploy:

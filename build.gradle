@@ -4,9 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'org.dell.kube'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+
 
 repositories {
 	mavenCentral()
