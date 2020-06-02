@@ -18,6 +18,7 @@ jobs:
         chmod +x ./gradlew build
         ls -a
         ls build/libs/ -a
+        ls ${{ github.workspace }}
   #      cp build/libs/pages.jar ${{ github.workspace }}
 
     - name: Publish artifact
