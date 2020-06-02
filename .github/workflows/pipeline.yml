@@ -19,13 +19,14 @@ jobs:
         ls -a
         ls build/libs/ -a
         ls ${{ github.workspace }}
+        cp Dockerfile build/libs
   #      cp build/libs/pages.jar ${{ github.workspace }}
 
     - name: Publish artifact
       uses: actions/upload-artifact@v1
       with:
         name: pages
-        path: ${{ github.workspace }}
+        path: build/libs
 
 
   deploy:
