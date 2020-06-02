@@ -17,8 +17,8 @@ jobs:
       run: |
         chmod +x ./gradlew build
         ls -a
-        ls /build/libs/ -a
-        cp ./build/libs/pages.jar ${{ github.workspace }}
+        ls build/libs/ -a
+        cp build/libs/pages.jar ${{ github.workspace }}
 
     - name: Publish artifact
       uses: actions/upload-artifact@v1
