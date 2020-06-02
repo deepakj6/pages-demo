@@ -15,20 +15,15 @@ jobs:
         java-version: 11
     - name: Build with Gradle
       run: |
-        pwd
         chmod +x ./gradlew build
         pwd
-        echo $GITHUB_WORKSPACE
-        echo '------------------------------------'
-        mkdir --parents results/artifacts
-        env | grep GITHUB_ | sort > results/artifacts/ci-env.txt
-        echo '------------------------------------'
+        echo 'Workspace path = $GITHUB_WORKSPACE'
 
     - name: Publish artifact
       uses: actions/upload-artifact@v1
       with:
         name: pages
-        path: build/libs
+        path: $GITHUB_WORKSPACE/build/libs/pages.jar
 
 
   deploy:
