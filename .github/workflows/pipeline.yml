@@ -14,12 +14,23 @@ jobs:
       with:
         java-version: 11
     - name: Build with Gradle
-      run: chmod +x ./gradlew build
+      run: |
+        pwd
+        chmod +x ./gradlew build
+        pwd
+        echo $GITHUB_WORKSPACE
+        echo '------------------------------------'
+        mkdir --parents results/artifacts
+        env | grep GITHUB_ | sort > results/artifacts/ci-env.txt
+        echo '------------------------------------'
+
     - name: Publish artifact
+      run: mkdir build/libs
       uses: actions/upload-artifact@v1
       with:
         name: pages
         path: build/libs
+
 
   deploy:
     needs: build-and-publish
