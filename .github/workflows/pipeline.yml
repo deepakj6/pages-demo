@@ -1,4 +1,4 @@
-name: Pal Tracker Pipeline
+name: Pages Pipeline
 
 on:
   push:
@@ -13,17 +13,18 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Workspace name
-      run: set GITHUB_WORKSPACE='/build/libs'
     - name: Build with Gradle
       run: |
         chmod +x ./gradlew build
+        ls -a
+        ls /build/libs/ -a
+        cp ./build/libs/pages.jar ${{ github.workspace }}
 
     - name: Publish artifact
       uses: actions/upload-artifact@v1
       with:
         name: pages
-        path: pages.jar
+        path: ${{ github.workspace }}/pages.jar
 
 
   deploy:
