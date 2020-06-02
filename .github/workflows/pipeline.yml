@@ -35,7 +35,7 @@ jobs:
     steps:
     - uses: docker/build-push-action@v1
       with:
-        dockerfile: ${{ github.workspace }}/Dockerfile
+        dockerfile: https://github.com/sathyaem/pages/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: sathiasara/pages
