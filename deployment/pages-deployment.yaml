@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pages
+  name: pages
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pages
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pages
+    spec:
+      containers:
+      - image: sathiasara/pages:1.0
+        name: pages
+        resources: {}
+status: {}
