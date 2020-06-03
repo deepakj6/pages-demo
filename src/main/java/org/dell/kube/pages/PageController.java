@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class PageController {
     private String pageContent;
-    public PageController(@Value("${page.name}") String pageContent)
+    public PageController(@Value("${page.content}") String pageContent)
     {
         this.pageContent=pageContent;
     }
