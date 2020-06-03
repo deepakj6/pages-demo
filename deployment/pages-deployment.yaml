@@ -20,5 +20,8 @@ spec:
       containers:
       - image: sathiasara/pages:1.0
         name: pages
+        env:
+          name: PAGE_CONTENT
+          value: "YellowPages"
         resources: {}
 status: {}

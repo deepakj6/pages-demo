@@ -58,7 +58,7 @@ jobs:
         run: |
           pks login -a api.pks.nilanjan.in  pks-workshop -u ${{ secrets.PKS_USERNAME }} -k -p ${{ secrets.PKS_PASSWORD }}
           pks get-credentials pks-workshop
-          kubectl apply -f deployment/pages-config.yaml
+#          kubectl apply -f deployment/pages-config.yaml
           kubectl apply -f deployment/pages-deployment.yaml
           kubectl apply -f deployment/pages-service.yaml
 
