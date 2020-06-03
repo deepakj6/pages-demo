@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  build-and-publish:
+  build-artifact:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -16,11 +16,6 @@ jobs:
     - name: Build with Gradle
       run: |
         chmod +x ./gradlew build
-        ls -a
-        ls build/libs/ -a
-        ls ${{ github.workspace }}
-        cp Dockerfile build/libs
-  #      cp build/libs/pages.jar ${{ github.workspace }}
 
     - name: Publish artifact
       uses: actions/upload-artifact@v1
@@ -28,9 +23,8 @@ jobs:
         name: pages
         path: build/libs
 
-
-  deploy:
-    needs: build-and-publish
+  build-docker-image:
+    needs: build-artifact
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -41,4 +35,4 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: sathiasara/pages
-        tags: new
+        tags: latest
