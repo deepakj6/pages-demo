@@ -22,6 +22,6 @@ spec:
         name: pages
         env:
           - name: PAGE_CONTENT
-            value: "YellowPages From Kubernetes ConfigMap"
+            value: "YellowPages From Kubernetes Deployment"
         resources: {}
 status: {}
