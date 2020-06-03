@@ -18,10 +18,10 @@ spec:
         app: pages
     spec:
       containers:
-      - image: sathiasara/pages:1.0
+      - image: sathiasara/pages:latest
         name: pages
         env:
           - name: PAGE_CONTENT
-            value: "YellowPages"
+            value: "YellowPages From Kubernetes ConfigMap"
         resources: {}
 status: {}
