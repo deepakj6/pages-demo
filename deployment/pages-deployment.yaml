@@ -10,7 +10,10 @@ spec:
   selector:
     matchLabels:
       app: pages
-  strategy: { Recreate}
+  strategy:
+    type: RollingUpdate
+      maxSurge: 1
+
   template:
     metadata:
       creationTimestamp: null
