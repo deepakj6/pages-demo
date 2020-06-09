@@ -10,7 +10,7 @@ spec:
   selector:
     matchLabels:
       app: pages
-  strategy: Recreate
+  strategy: { Recreate}
   template:
     metadata:
       creationTimestamp: null
