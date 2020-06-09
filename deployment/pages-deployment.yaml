@@ -18,10 +18,10 @@ spec:
         app: pages
     spec:
       containers:
-      - image: sathiasara/pages:latest
+      - image: deepakpesit/pages:latest
         name: pages
         env:
           - name: PAGE_CONTENT
-            value: "YellowPages From PKS"
+            value: "GreenPages coming to a green world!"
         resources: {}
 status: {}
