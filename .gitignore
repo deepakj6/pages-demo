@@ -1,0 +1,13 @@
+# Folder config file
+Desktop.ini
+
+# Package Files #
+build
+.gradle
+.idea
+*.iml
+
+# Package Files #
+*.jar
+*.war
+*.ear

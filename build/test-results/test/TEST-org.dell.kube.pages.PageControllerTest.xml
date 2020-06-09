@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.dell.kube.pages.PageControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-03T08:08:13" hostname="INMKRANGAS1L2C" time="0.212">
+<testsuite name="org.dell.kube.pages.PageControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-09T05:54:29" hostname="INMKJAGADDL2C" time="0.19">
   <properties/>
-  <testcase name="itSaysYellowPagesHello()" classname="org.dell.kube.pages.PageControllerTest" time="0.212"/>
+  <testcase name="itSaysYellowPagesHello()" classname="org.dell.kube.pages.PageControllerTest" time="0.19"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
