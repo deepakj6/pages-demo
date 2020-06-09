@@ -23,11 +23,17 @@ spec:
       containers:
       - image: deepakpesit/pages:latest
         name: pages
+        ports:
+          - containerPort: 8080
         env:
           - name: PAGE_CONTENT
             valueFrom:
               configMapKeyRef: 
                 name: pages-config-map
                 key: PAGE_CONTENT
+          - name: MYSQL_SERVICE_HOST
+            value: "pages-mysql"
+          - name: MYSQL_SERVICE_PORT
+            value: "3306"
         resources: {}
 status: {}
