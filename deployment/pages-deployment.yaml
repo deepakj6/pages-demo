@@ -22,6 +22,9 @@ spec:
         name: pages
         env:
           - name: PAGE_CONTENT
-            value: "GreenPages coming to a green world!"
+            valueFrom:
+              configMapKeyRef: 
+                name: pages-config-map
+                key: PAGE_CONTENT
         resources: {}
 status: {}

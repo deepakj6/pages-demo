@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: pages-config-map
 data:
-  PAGE_CONTENT: YellowPages
+  PAGE_CONTENT: "Green-Pages coming from Yellow-world!"
