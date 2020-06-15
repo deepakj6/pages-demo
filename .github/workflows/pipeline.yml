@@ -17,7 +17,7 @@ jobs:
       run: sudo service mysql start
     - name: Create test database
       run: |
-        mysql -uroot -p < databases/create_database.sql
+        mysql -uroot -proot < databases/create_database.sql
     - name: Build with Gradle
       run: |
         chmod +x ./gradlew
