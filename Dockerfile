@@ -6,7 +6,8 @@
 
 FROM adoptopenjdk:11-jre-openj9
 RUN mkdir /opt/app
-ARG APPJAR=build/libs/*.jar
+#ARG APPJAR=build/libs/*.jar
+ARG APPJAR=pages.jar
 COPY ${APPJAR} /opt/app/app.jar
 CMD ["java", "-jar", "/opt/app/app.jar"]
 
