@@ -49,4 +49,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: deepakpesit/pages
-          tags: latest
+          tags: smartest
+      - name: Test
+        run: |
+        pwd
+        ls -R

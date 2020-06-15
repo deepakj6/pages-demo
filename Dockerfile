@@ -7,10 +7,8 @@
 FROM adoptopenjdk:11-jre-openj9
 RUN mkdir /app
 #ARG APPJAR=build/libs/*.jar
-RUN find . -name "*.jar"
 ARG APPJAR=pages.jar
 COPY ${APPJAR} /app.jar
-RUN find . -name "*.jar"
 CMD ["java", "-jar", "/app.jar"]
 
 
