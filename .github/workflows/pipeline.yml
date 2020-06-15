@@ -20,7 +20,7 @@ jobs:
         mysql -uroot -proot < databases/create_database.sql
     - name: Build with Gradle
       run: |
-        chmod +x ./gradlew build
+        ./gradlew build
 
     - name: Publish artifact
       uses: actions/upload-artifact@v1

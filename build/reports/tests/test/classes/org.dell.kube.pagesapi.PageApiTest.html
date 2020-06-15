@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PageApiTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PageApiTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.dell.kube.pagesapi.html">org.dell.kube.pagesapi</a> &gt; PageApiTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.434s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">healthTest()</td>
+<td class="success">0.319s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">readTest()</td>
+<td class="success">1.115s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>17:31:47.512 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:31:47.584 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:31:47.681 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.dell.kube.pagesapi.PageApiTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:31:47.765 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.dell.kube.pagesapi.PageApiTest], using SpringBootContextLoader
+17:31:47.773 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.dell.kube.pagesapi.PageApiTest]: class path resource [org/dell/kube/pagesapi/PageApiTest-context.xml] does not exist
+17:31:47.774 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.dell.kube.pagesapi.PageApiTest]: class path resource [org/dell/kube/pagesapi/PageApiTestContext.groovy] does not exist
+17:31:47.775 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.dell.kube.pagesapi.PageApiTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:31:47.960 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.dell.kube.pagesapi.PageApiTest]
+17:31:48.584 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.dell.kube.pagesapi.PageApiTest]: using defaults.
+17:31:48.586 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:31:48.625 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6cb05c70, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1570fe92, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e69521a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@58e45a13, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36d9dea3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@24cf3284, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10025d85, org.springframework.test.context.event.EventPublishingTestExecutionListener@6a4cb954, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@12984e78, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4f1e05bd, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d7287ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@427b114d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@12406cf4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2d4cb0ec]
+17:31:48.637 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7e24fba0 testClass = PageApiTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5344f841 testClass = PageApiTest, locations = '{}', classes = '{class org.dell.kube.pages.PageApplication, class org.dell.kube.pages.PageApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@76a14027, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@28b8e53e, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@605c0792, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4d3fb1d7, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]], class annotated with @DirtiesContext [false] with mode [null].
+17:31:48.653 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@7e24fba0 testClass = PageApiTest, testInstance = org.dell.kube.pagesapi.PageApiTest@151f89cd, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5344f841 testClass = PageApiTest, locations = '{}', classes = '{class org.dell.kube.pages.PageApplication, class org.dell.kube.pages.PageApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@76a14027, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@28b8e53e, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@605c0792, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4d3fb1d7, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]]].
+17:31:48.751 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.0.RELEASE)
+
+2020-06-15 17:31:50.792  INFO 5332 --- [    Test worker] org.dell.kube.pagesapi.PageApiTest       : Starting PageApiTest on INMKJAGADDL2C with PID 5332 (started by jagadd in C:\WorkSpace\Kates\workshop\pages-workspace\pages)
+2020-06-15 17:31:50.795  INFO 5332 --- [    Test worker] org.dell.kube.pagesapi.PageApiTest       : No active profile set, falling back to default profiles: default
+2020-06-15 17:31:55.284  INFO 5332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-15 17:31:55.645  INFO 5332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 302ms. Found 1 JPA repository interfaces.
+2020-06-15 17:32:04.540  INFO 5332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2020-06-15 17:32:04.584  INFO 5332 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-15 17:32:04.585  INFO 5332 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-15 17:32:05.850  INFO 5332 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-15 17:32:05.851  INFO 5332 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 14977 ms
+2020-06-15 17:32:11.044  INFO 5332 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-15 17:32:11.625  INFO 5332 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-15 17:32:12.999  INFO 5332 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-15 17:32:13.732  INFO 5332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-15 17:32:14.464  INFO 5332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-15 17:32:14.549  INFO 5332 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Hibernate: drop table if exists hibernate_sequence
+Hibernate: drop table if exists pages
+Hibernate: create table hibernate_sequence (next_val bigint) engine=MyISAM
+Hibernate: insert into hibernate_sequence values ( 1 )
+Hibernate: create table pages (id bigint not null, address varchar(255), business varchar(255), category_id bigint, contact_no varchar(255), content varchar(255), primary key (id)) engine=MyISAM
+2020-06-15 17:32:16.955  INFO 5332 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-15 17:32:16.982  INFO 5332 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-15 17:32:18.759  WARN 5332 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-15 17:32:22.148  INFO 5332 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-15 17:32:26.166  INFO 5332 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-06-15 17:32:26.630  INFO 5332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 53558 (http) with context path ''
+2020-06-15 17:32:26.731  INFO 5332 --- [    Test worker] org.dell.kube.pagesapi.PageApiTest       : Started PageApiTest in 37.975 seconds (JVM running for 43.602)
+2020-06-15 17:32:27.878  INFO 5332 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-15 17:32:27.880  INFO 5332 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-15 17:32:27.991  INFO 5332 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 110 ms
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.4.1</a> at Jun 15, 2020, 5:32:30 PM</p>
+</div>
+</div>
+</body>
+</html>
