@@ -20,16 +20,18 @@ jobs:
         mysql -uroot -proot < databases/create_database.sql
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Publish artifact
-      uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2
       with:
-        path: build/libs
-     - name: Publish source files
-       run:  ls -R
-     - uses: actions/upload-artifact@v2
-       with:
-         path: build/libs
+        name: artifact
+        path: build/libs/pages.jar
 
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/download-artifact@v2
+      with:
+        name: artifact
+    - name: Display structure of downloaded files
+      run: ls -R
 
   build-docker-image:
     needs: build-artifact
@@ -41,42 +43,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: deepakpesit/pages
         tags: latest
-
-  deploy-image-to-pks:
-    needs: build-docker-image
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Install Pivnet & PKS
-        run: |
-          sudo apt-get update
-          wget -O pivnet github.com/pivotal-cf/pivnet-cli/releases/download/v0.0.55/pivnet-linux-amd64-0.0.55 && chmod +x pivnet && sudo mv pivnet /usr/local/bin
-          pivnet login --api-token=cd8d86d24afa43b9bd989012adcbf3f5-r
-          pivnet download-product-files --product-slug='pivotal-container-service' --release-version='1.7.0' --product-file-id=646536
-          sudo mv pks-linux-amd64-1.7.0-build.483 pks
-          chmod +x pks
-          sudo mv pks /usr/local/bin/
-      - name: Install Kubectl
-        run: |
-          pivnet download-product-files --product-slug='pivotal-container-service' --release-version='1.7.0' --product-file-id=633728
-          sudo mv  kubectl-linux-amd64-1.16.7 kubectl
-          chmod +x kubectl
-          sudo mv kubectl /usr/local/bin/
-      - name: PKS Login
-        run: |
-          pks login -a api.pks.nilanjan.in  pks-workshop -u ${{ secrets.PKS_USERNAME }} -k -p ${{ secrets.PKS_PASSWORD }}
-          pks get-credentials pks-workshop
-          kubectl apply -f deployment/pages-config.yaml
-          kubectl apply -f deployment/pages-deployment.yaml
-          kubectl apply -f deployment/pages-service.yaml
-
-
-    #1 - Install Pivnet
-    #2 - Install PKS CLI
-    #3 - Install kubectl
-    #4 - Login to pks
-    #5 - Set the kubectl context to target pks cluster
-    #6 - Create Deployment
-    #7 - Create Service
-    #8- Create ConfigMap/Secrets
 
