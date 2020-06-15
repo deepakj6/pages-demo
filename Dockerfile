@@ -5,7 +5,7 @@
 #RUN jar -xf ./app.jar
 
 FROM adoptopenjdk:11-jre-openj9
-RUN ls -R
+RUN ls -al
 
 RUN mkdir /opt/app
 #ARG APPJAR=build/libs/*.jar
