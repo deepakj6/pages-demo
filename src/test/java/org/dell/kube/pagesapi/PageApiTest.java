@@ -3,15 +3,22 @@ package org.dell.kube.pagesapi;
 import org.dell.kube.pages.ApplicationConfig;
 import org.dell.kube.pages.PageApplication;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.context.annotation.Import;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @SpringBootTest(classes = PageApplication.class, webEnvironment = RANDOM_PORT)
 //@Import(ApplicationConfig.class)
+
+//@ExtendWith(SpringExtension.class)
+//@DataJpaTest
 public class PageApiTest {
 
     @Autowired
