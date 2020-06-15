@@ -39,6 +39,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: deepakpesit/pages
         tags: latest
+    - name: Test Path of Artifacts
+      run: |
+        ls
+        ls build/
   deploy-image-to-pks:
     needs: build-docker-image
     runs-on: ubuntu-latest
