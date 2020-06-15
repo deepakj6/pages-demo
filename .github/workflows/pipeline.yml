@@ -31,16 +31,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - uses: actions/upload-artifact@v1
     - name: Test Path of Artifacts
       run: |
         echo "------------------START--------------------------"
         echo "------------------001---------------------------"
         echo "Listing directories recursively"
-        ls -R
+        ls -R --full-time
         echo "------------------002---------------------------"
         ls -al
         echo "------------------003---------------------------"
-        ls build/
+        ls build/ --full-time
         echo "-------------------END---------------------------"
     - uses: docker/build-push-action@v1
       with:
