@@ -34,7 +34,8 @@ jobs:
       with:
         name: pages
         path: build/libs
-        run: ls -R
+    - name: Print contents
+      run: ls -R
     - uses: actions/checkout@master
     - uses: docker/build-push-action@v1
         username: ${{ secrets.DOCKER_USERNAME }}
