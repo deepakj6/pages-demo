@@ -31,11 +31,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: docker/build-push-action@v1
     - uses: actions/download-artifact@v2
       with:
         name: pages
         path: build/libs
+        run: ls -R
+    - uses: docker/build-push-action@v1
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: deepakpesit/pages
