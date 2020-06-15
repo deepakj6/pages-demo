@@ -2,7 +2,6 @@
 Desktop.ini
 
 # Package Files #
-build
 .gradle
 .idea
 *.iml
