@@ -23,7 +23,6 @@ jobs:
     - name: Publish artifact
       uses: actions/upload-artifact@v1
       with:
-        name: pages
         path: build/libs
      - name: Publish source files
        run:  ls -R
