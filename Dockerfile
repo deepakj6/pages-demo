@@ -5,14 +5,12 @@
 #RUN jar -xf ./app.jar
 
 FROM adoptopenjdk:11-jre-openj9
-RUN ls -al -R
-
 RUN mkdir /app
 #ARG APPJAR=build/libs/*.jar
-
+RUN find . -name "*.jar"
 ARG APPJAR=pages.jar
 COPY ${APPJAR} /app.jar
-RUN ls -al -R
+RUN find . -name "*.jar"
 CMD ["java", "-jar", "/app.jar"]
 
 
