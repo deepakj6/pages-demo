@@ -5,13 +5,13 @@
 #RUN jar -xf ./app.jar
 
 FROM adoptopenjdk:11-jre-openj9
-RUN ls pages -R
+RUN ls
 
-RUN mkdir /opt/app
+RUN mkdir /app
 #ARG APPJAR=build/libs/*.jar
 
-ARG APPJAR=/pages/build/libs/pages.jar
-COPY ${APPJAR} /opt/app/app.jar
-CMD ["java", "-jar", "/opt/app/app.jar"]
+ARG APPJAR=pages.jar
+COPY ${APPJAR} /app.jar
+CMD ["java", "-jar", "/app.jar"]
 
 
