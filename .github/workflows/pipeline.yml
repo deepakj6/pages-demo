@@ -52,5 +52,5 @@ jobs:
           tags: smartest
       - name: Test
         run: |
-        pwd
-        ls -R
+          pwd
+          ls -R
