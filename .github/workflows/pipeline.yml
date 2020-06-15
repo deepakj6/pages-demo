@@ -31,11 +31,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - uses: actions/download-artifact@v2
+      with:
+        name: pages
+    - name: Display structure of downloaded files
+      run: ls -R
     - name: Test Path of Artifacts
       run: |
         echo "------------------START--------------------------"
         echo "------------------001---------------------------"
-        ls /home/runner/work -R
+        echo $GITHUB_WORKSPACE
+        echo"-------------------------------------------------"
         echo "Listing directories recursively"
         ls -R --full-time
         echo "------------------002---------------------------"
