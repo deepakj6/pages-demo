@@ -35,6 +35,7 @@ jobs:
       run: |
         echo "------------------START--------------------------"
         echo "------------------001---------------------------"
+        ls /home/runner/work -R
         echo "Listing directories recursively"
         ls -R --full-time
         echo "------------------002---------------------------"
