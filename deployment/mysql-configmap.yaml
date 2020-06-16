@@ -3,11 +3,9 @@ kind: ConfigMap
 metadata:
   name: mysql-configmap
 data:
-  spring.datasource.username: root
-  V1__initial_db.sql: |    
-    DROP DATABASE pages IF EXISTS;
-    CREATE DATABASE pages;
-  V2__inital_schema.sql: |
+  spring.datasource.username: root  
+  V1__inital_schema.sql: |
+    CREATE DATABASE IF NOT EXISTS pages;
     USE pages;
     create table pages(
     id bigint(20) not null auto_increment,

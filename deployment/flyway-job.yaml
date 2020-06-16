@@ -43,4 +43,4 @@ spec:
         - name: sql
           configMap:
             name: mysql-configmap
-      restartPolicy: OnFailure
+      restartPolicy: Never
