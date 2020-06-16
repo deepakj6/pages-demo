@@ -73,7 +73,7 @@ jobs:
           kubectl apply -f deployment/mysql-service.yaml
           kubectl apply -f deployment/mysql-deployment.yaml
 
-       # DB Migrations using Flyway & K8 Jobs
+          #DB Migrations using Flyway & K8 Jobs
           kubectl apply -f deployment/mysql-configmap.yaml
           kubectl apply -f deployment/flyway-job.yaml
 
