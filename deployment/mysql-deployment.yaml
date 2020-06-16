@@ -16,7 +16,7 @@ spec:
         app: pages
     spec:
       containers:
-        - image: mysql:5.6
+        - image: mysql:8.0
           name: mysql
           env:
             - name: MYSQL_ROOT_PASSWORD
