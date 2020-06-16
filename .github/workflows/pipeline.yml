@@ -19,7 +19,9 @@ jobs:
       run: |
         mysql -uroot -proot < databases/create_database.sql
     - name: Build with Gradle
-      run: chmod +x ./gradlew build
+      run: |
+        chmod +x ./gradlew
+        ./gradlew clean build
     - uses: actions/upload-artifact@v2
       with:
         name: artifact
