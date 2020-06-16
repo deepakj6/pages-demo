@@ -1,54 +1,49 @@
 package org.dell.kube.pages;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/pages")
 public class PageController {
-    @Autowired
-    private PagesRepository repository;
-    public PageController()
+
+    private IPageRepository pageRepository;
+    public PageController(IPageRepository pageRepository)
     {
-        //this.repository=pagesRepository;
+        this.pageRepository = pageRepository;
+    }
+    @PostMapping
+    public ResponseEntity<Page> create(@RequestBody Page page) {
+        Page newPage= pageRepository.create(page);
+        return new ResponseEntity<Page>(newPage, HttpStatus.CREATED);
+    }
+    @GetMapping("{id}")
+    public ResponseEntity<Page> read(@PathVariable long id) {
+        Page page = pageRepository.read(id);
+        if(page!=null)
+            return new ResponseEntity<Page>(page,HttpStatus.OK);
+        else
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
     @GetMapping
-    public ResponseEntity<List<Page>> list(){
-
-        return new ResponseEntity<List<Page>> (repository.findAll(),HttpStatus.OK);
+    public ResponseEntity<List<Page>> list() {
+        List<Page> pages= pageRepository.list();
+        return new ResponseEntity<List<Page>>(pages,HttpStatus.OK);
     }
-
-    @GetMapping("{id}")
-    public ResponseEntity<Page> getById(@PathVariable Long id){
-        return new ResponseEntity<Page>(repository.getOne(id), HttpStatus.OK);
-    }
-
-    @PostMapping
-    public ResponseEntity<Page> create(@RequestBody Page page){
-        return new ResponseEntity<Page>(repository.save(page),HttpStatus.CREATED);
-    }
-
     @PutMapping("{id}")
-    public ResponseEntity<Page> update(@PathVariable Long id, @RequestBody Page page){
-        if(repository.getOne(id) == null){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        page.setId(id);
-        return new ResponseEntity<Page>(repository.save(page),HttpStatus.OK);
+    public ResponseEntity<Page> update(@RequestBody Page page, @PathVariable long id) {
+        Page updatedPage= pageRepository.update(page,id);
+        if(updatedPage!=null)
+            return new ResponseEntity<Page>(updatedPage,HttpStatus.OK);
+        else
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
-
     @DeleteMapping("{id}")
-    public ResponseEntity deleteById(@PathVariable Long id){
-        if(repository.getOne(id) == null){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        repository.deleteById(id);
+    public ResponseEntity delete(@PathVariable long id) {
+        pageRepository.delete(id);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 }

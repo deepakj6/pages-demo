@@ -1,20 +1,29 @@
 package org.dell.kube.pages;
 
-
-import javax.persistence.*;
-
-@Entity
-@Table(name="pages")
 public class Page {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    public Long id;
-    public String business;
-    public Long category_id;
-    public String address;
-    public String contact_no;
-    public String content;
 
+    public Long id;
+    public String businessName;
+    public Long categoryId;
+    public String address;
+    public String contactNumber;
+
+    public Page(){}
+
+    public Page(String businessName, String address, long categoryId, String contactNumber) {
+        this.businessName = businessName;
+        this.address = address;
+        this.categoryId = categoryId;
+        this.contactNumber = contactNumber;
+    }
+
+    public Page(long id, String businessName, String address, long categoryId, String contactNumber) {
+        this.id = id;
+        this.businessName = businessName;
+        this.address = address;
+        this.categoryId = categoryId;
+        this.contactNumber = contactNumber;
+    }
     public Long getId() {
         return id;
     }
@@ -23,20 +32,20 @@ public class Page {
         this.id = id;
     }
 
-    public String getBusiness() {
-        return business;
+    public String getBusinessName() {
+        return businessName;
     }
 
-    public void setBusiness(String business) {
-        this.business = business;
+    public void setBusinessName(String businessName) {
+        this.businessName = businessName;
     }
 
-    public Long getCategory_id() {
-        return category_id;
+    public Long getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory_id(Long category_id) {
-        this.category_id = category_id;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getAddress() {
@@ -47,19 +56,11 @@ public class Page {
         this.address = address;
     }
 
-    public String getContact_no() {
-        return contact_no;
+    public String getContactNumber() {
+        return contactNumber;
     }
 
-    public void setContact_no(String contact_no) {
-        this.contact_no = contact_no;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
     }
 }
