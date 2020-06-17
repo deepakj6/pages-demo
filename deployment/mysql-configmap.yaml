@@ -4,8 +4,7 @@ metadata:
   name: mysql-configmap
 data:
   spring.datasource.username: root  
-  V1__inital_schema.sql: |
-    CREATE DATABASE IF NOT EXISTS pages;
+  V1__inital_schema.sql: |    
     USE pages;
     create table pages(
     id bigint(20) not null auto_increment,
